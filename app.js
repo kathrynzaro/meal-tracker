@@ -3,11 +3,14 @@ import { renderIngredient } from './utils.js';
 
 const form = document.getElementById('add-ingredient');
 const itemList = document.getElementById('item-list');
+const mealName = document.getElementById('meal');
+const save = document.getElementById('save-meal');
 
 const remove = document.getElementById('remove');
 
 // let state
 let ingredients = [];
+let meals = [];
 // set event listeners 
   // get user input
   // use user input to update state 
@@ -38,4 +41,15 @@ form.addEventListener('submit', (e) => {
 remove.addEventListener('click', () => {
     ingredients.pop();
     displayIngredients();
+});
+
+save.addEventListener('click', () => {
+    const mealData = {
+        name: mealName.value,
+        ingredientCount: ingredients.length,
+    };
+
+    meals.push(mealData);
+    itemList.textContent = '';
+    console.log(mealData);
 });
