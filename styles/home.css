@@ -99,3 +99,7 @@ button {
 #meal {
     margin: 10px;
 }
+
+#meal-list {
+    font-size: .8rem;
+}
