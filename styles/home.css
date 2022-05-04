@@ -1,4 +1,12 @@
 /* add home page styles here */
+
+body {
+    --pumpkin: #FF7300ff;
+--dark-orange: #FC9121ff;
+--raw-sienna: #C97E4Eff;
+--gainsboro: #E5E2E6ff;
+--tumbleweed: #ECB499ff;
+}
 .ingredients {
     display: flex;
     flex-direction: row;
@@ -10,7 +18,84 @@
     flex-direction: column;
 }
 
+main {
+    padding-top: 50px;
+    background-image: url(../assets/baking.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 175px;
+}
+
 form {
     display: flex;
     flex-direction: column;
+}
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 5px 15px;
+    border-radius: 5px;
+    
+}
+
+section {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 0px;
+}
+
+input, select {
+    /* margin-left: 5px; */
+    font-family: 'Josefin Sans', sans-serif;
+    width: fit-content;
+    background-color: var(--tumbleweed);
+    border: solid 1px var(--pumpkin);
+    border-radius: 3px;
+    color: white;
+}
+
+
+.item-list {
+    margin-left: 20px;
+    font-size: .7rem;
+}
+
+/* #bottom {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+} */
+
+button {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--pumpkin);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    width: fit-content;
+}
+
+#remove {
+    font-size: .5rem;
+}
+
+#meal-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#meal {
+    margin: 10px;
 }

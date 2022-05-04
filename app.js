@@ -48,6 +48,7 @@ form.addEventListener('submit', (e) => {
     form.reset();
 });
 
+
 remove.addEventListener('click', () => {
     ingredients.pop();
     displayIngredients();
@@ -60,7 +61,9 @@ save.addEventListener('click', () => {
     };
 
     meals.push(mealData);
-    itemList.textContent = '';
     displayIngredients();
     displayMeals();
+    itemList.textContent = '';
+    ingredients.length = 0;
+    mealName.value = '';
 });

@@ -2,12 +2,11 @@
 body {
     /* feel free to update these css variables for a quick theme */
     
-    --color1: white;
-    --color2: white;
-    --color3: white;
-    --color4: white;
-    --color5: white;
-    
+--pumpkin: #FF7300ff;
+--dark-orange: #FC9121ff;
+--raw-sienna: #C97E4Eff;
+--gainsboro: #E5E2E6ff;
+--tumbleweed: #ECB499ff;
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
         
     /* --color1: hsla(349, 69%, 76%, 1);
@@ -25,10 +24,11 @@ body {
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
-    --footer-height: 25px;
+    /* --footer-height: 25px; */
     
-    font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    font-family: 'Josefin Sans', sans-serif;
+    
+    color: white;
 }
 
 main {
@@ -36,11 +36,12 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    /* margin-bottom: calc(var(--footer-height)); */
 }
 
 section {
-    background-color: var(--color5);
+    background-color: var(--dark-orange);
+    opacity: .9;
     max-width: 80%;
     display: flex;
     flex-direction: column;
@@ -79,7 +80,7 @@ p {
     margin: var(--gutter);
 }
   
-footer {
+/* footer {
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -88,4 +89,4 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
-}
+} */
