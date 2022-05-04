@@ -1,12 +1,14 @@
 // import functions and grab DOM elements
-import { renderIngredient } from './utils.js';
+import { renderIngredient, renderMeal } from './utils.js';
 
 const form = document.getElementById('add-ingredient');
 const itemList = document.getElementById('item-list');
+
 const mealName = document.getElementById('meal');
-const save = document.getElementById('save-meal');
+const mealList = document.getElementById('meal-list');
 
 const remove = document.getElementById('remove');
+const save = document.getElementById('save-meal');
 
 // let state
 let ingredients = [];
@@ -21,6 +23,14 @@ function displayIngredients() {
     for (let item of ingredients) {
         const li = renderIngredient(item);
         itemList.appendChild(li);
+    }
+}
+
+function displayMeals() {
+    mealList.textContent = '';
+    for (let meal of meals) {
+        const li = renderMeal(meal);
+        mealList.appendChild(li);
     }
 }
 
@@ -51,5 +61,6 @@ save.addEventListener('click', () => {
 
     meals.push(mealData);
     itemList.textContent = '';
-    console.log(mealData);
+    displayIngredients();
+    displayMeals();
 });
